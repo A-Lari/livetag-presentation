@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<a href="https://revealjs.com">
+						<img src="./images/logo_all-in-qr-livetag.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h4>Tag universel pour les évènements live</h4>
+					<p>
+						<small>Un projet Open Source proposé par <a href="https://kodyneo.io/">Kodyneo</a></small>
+					</p>
+					<p>
+						<small>Equipe: Grégory, Christian, Kévin, Anthony, Julien</small>
+					</p>
+				</section>
+				<section>
+					<section id="intro_1">
+						<h4>Introduction</h4>
+						<p>
+							La solution All-in-QR “LiveTag” est un projet de solution tout-en-un facilitant
+							l’organisation lors d’évènements live type salons, conférences, hackathons						
+						</p>						
+					</section>
+					<section id="intro_2">
+						<h4>Introduction</h4>
+						<p>
+							L’élément central de la solution est la génération d’un QRCode tout en un pour les
+							parties prenantes d’un évènement : participants, conférenciers, exposants						
+						</p>						
+					</section>
+					<section id="intro_3">
+						<h4>Ce QRCode individuel permettra</h4>
+						<ul>
+							<li>De contrôler les entrées/sorties individuelles</li>
+							<li>De contrôler l’accès aux activités, conférences, repas, etc...</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section id="besoin_1">
+						<h4>Besoin / Cahier des charges</h4>
+						<ul>
+							<li>Une application web permettant la gestion des évènements et la génération de QRCode</li>
+							<li>Une application mobile « compagnon » permettra aux membres du staff d’effectuer les différentes vérifications de contrôle et d’accès</li>
+						</ul>
+					</section>						
+					<section id="besoin_2">
+						<h4>MVP de l'application web</h4>
+						<ul>
+							<li>Connexion/Inscription</li>
+							<li>Gestion des évènements par utilisateur connecté</li>
+							<li>Gestion des activités par évènement</li>
+							<li>Gestion des rôles par évènement</li>
+							<li>Gestion des participants par évènement</li>
+						</ul>
+					</section>
+					<section id="besoin_3">
+						<h4>MVP+1 de l'application web</h4>
+						<ul>
+							<li>[MVP+1] Pour chaque rôle de l’évènement, il doit être possible de générer un lien emmenant vers une page d’inscription</li>
+							<li>Possibilité de s'inscrire à des activités hors roles sur la page d'inscription généré par le lien</li>
+						</ul>
+					</section>
+					<section id="besoin_4">
+						<h4>MVP+2 de l'application web</h4>
+						<ul>
+							<li>[MVP + 2] Le paiement pourra être effectué à l’inscription avec Stripe.</li>
+						</ul>
+					</section>
+					<section id="besoin_5">
+						<h4>MVP de l'application mobile</h4>
+						<ul>
+							<li>Saisir et modifier le code évènement (généré par l'app web)</li>
+							<li>Scanner un QRCode et de vérifier si le participant est bien inscrit à l’évènement</li>
+							<li>Scanner un QRCode et de vérifier si le participant est bien inscrit à une activité (inclus dans le rôle ou hors role</li>
+						</ul>
+					</section>								
+				</section>
+				<section>
+					<section id="projet_1">
+						<h4>Gestion de projet, répartition des tâches</h4>
+						<ol>
+							<li>Utilisation de la méthode agile scrum pendant tout le développement du projet</li>
+							<li>Découpage en 3 sprints</li>
+						</ol>
+						<p>
+							<small>Projet géré à l'aide de <a href="https://trello.com/b/8L2NsoSy/all-in-qr-livetag-sprint1">Trello</a></small>
+						</p>
+					</section>
+					<section id="projet_2">
+						<h4>Gestion de projet, répartition des tâches</h4>
+						<img src="./images/projet/projet.png"/>
+					</section>
+				</section>
+				<section>
+					<section id="Architecture_1" class="SFR-slide pf" data-background="white" footer="Architecture">
+						<h4>Architecture Mern stack pour le développement du projet</h4>
+						<img src="./images/architecture/mern-stack.png"/>
+					</section>
+					<section id="Architecture_2" class="SFR-slide pf" data-background="white" footer="Architecture">
+						<h4>Utilisation de React native pour l'appli mobile</h4>
+						<img src="./images/architecture/react-native1.jpg"/>
+					</section>
+				</section>
+				<section>
+					<section id="Architecture_1" class="SFR-slide pf" data-background="white" footer="Architecture">
+						<img src="./images/architecture/bdd1.png"/>
+					</section>
+				</section>
+				<section>
+					<section id="intro_3">
+						<h4>Choix techniques</h4>
+						<ul>
+							<li>JWT</li>
+							<li>bcrypt</li>
+							<li>dotenv</li>
+							<li>react-bootstrap</li>
+							<li>mui/material</li>
+							<li>nodemailer</li>
+							<li>axios</li>
+							<li>dayjs</li>
+							<li>short-unique-id</li>
+						</ul>
+					</section>
+					<section id="intro_3">
+						<h4>Choix techniques</h4>
+						<ul>
+							<li>qrcode</li>
+							<li>react-to-print</li>
+							<li>react-copy-to-clipboard</li>
+							<li>stripe</li>
+						</ul>
+					</section>					
+				</section>
+				<section id="besoin_2">
+					<h4>Codes à montrer avec visual code</h4>
+					<ul>
+						<li>Liste activités hors roles</li>
+						<li>Génération des liens pour les rôles</li>
+						<li>Check dates events</li>
+						<li>...</li>
+					</ul>
+				</section>				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
